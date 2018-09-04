@@ -1,8 +1,3 @@
-
-// the above line of code will no longer be useful after 2nd november 2018, so
-// update the code to request user to accept the transaction regarding
-// deployment of web3 instance into the window
-
 import Web3 from 'web3';
 
 let web3;
@@ -16,6 +11,10 @@ else {
   const provider = new Web3.providers.HttpProvider(
     'https://rinkeby.infura.io/orDImgKRzwNrVCDrAk5Q'
   );
+  
+ // the above line of code will no longer be useful after 2nd november 2018, so
+ // update the code to request user to accept the transaction regarding
+ // deployment of web3 instance into the window
   web3 = new Web3(provider);
 }
 
