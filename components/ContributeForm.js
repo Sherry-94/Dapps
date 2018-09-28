@@ -13,7 +13,6 @@ class ContributeForm extends Component{
     successMessage: '',
     loading: false
   }
-
   onSubmit = async (event) =>
   {
     event.preventDefault();
