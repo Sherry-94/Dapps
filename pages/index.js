@@ -5,7 +5,6 @@ import factory from '../ethereum/factory';
 import { Link } from '../routes';
 
 class CampaignIndex extends Component{
-
     static async getInitialProps()
     {
       const Campaigns = await factory.methods.getDeployedCampaigns().call();

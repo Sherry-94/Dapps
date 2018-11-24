@@ -59,7 +59,6 @@ describe('Campaigns', () => {
         from: accounts[1],
         value: '10'
       });
-
     assert(false);
     }
     catch(err)

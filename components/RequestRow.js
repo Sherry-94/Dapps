@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Table, Button } from 'semantic-ui-react';
+
 import web3 from '../ethereum/web3';
 import Campaign from '../ethereum/campaign';
 
@@ -30,8 +31,7 @@ class RequestRow extends Component {
     return (
       <Row
         disabled={request.complete}
-        positive={readyToFinalize && !request.complete}
-      >
+        positive={readyToFinalize && !request.complete}>
         <Cell>{id}</Cell>
         <Cell>{request.description}</Cell>
         <Cell>{web3.utils.fromWei(request.value, 'ether')}</Cell>

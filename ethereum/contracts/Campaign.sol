@@ -22,7 +22,6 @@ contract Campaign {
         uint approvalCount;
         mapping(address => bool) approvals;
     }
-
     Request[] public requests;
     address public manager;
     uint public minimumContribution;
@@ -54,7 +53,6 @@ contract Campaign {
            complete: false,
            approvalCount: 0
         });
-
         requests.push(newRequest);
     }
 

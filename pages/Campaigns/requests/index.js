@@ -7,7 +7,6 @@ import Campaign from '../../../ethereum/campaign';
 import web3 from '../../../ethereum/web3';
 import { Link, Router } from '../../../routes';
 
-
 class CampaignRequests extends Component{
   static async getInitialProps(props) {
     const campaign = Campaign(props.query.address);
@@ -72,10 +71,8 @@ class CampaignRequests extends Component{
             <Body>
               {this.renderRows()}
             </Body>
-
           </Table>
           <div>Found {this.props.requestsCount} requests.</div>
-
       </Layout>
     );
   }
