@@ -1,7 +1,6 @@
 import React from 'react';
 import { Menu } from 'semantic-ui-react';
 import { Link } from '../routes';
-
 export default (props) => {
   return(
     <Menu style={{marginTop: '15px'}}>
