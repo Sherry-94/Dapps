@@ -61,19 +61,20 @@ contract Campaign {
 
         require(approvers[msg.sender]);
         require(!request.approvals[msg.sender]);
-
-        request.approvals[msg.sender] = true;
+        
         request.approvalCount++;
+        request.approvals[msg.sender] = true;
+        
     }
 
     function finalizeRequest(uint index) public restricted {
         Request storage request = requests[index];
-
         require(request.approvalCount > (approversCount / 2));
         require(!request.complete);
-
-        request.recipient.transfer(request.value);
+        
         request.complete = true;
+        request.recipient.transfer(request.value);
+        
     }
 
     function getSummary() public view returns (
